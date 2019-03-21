@@ -1,6 +1,6 @@
 package model;
 
-public class Monom implements Comparable<Monom> {
+public class Monom implements Comparable<Monom> { //clasa ce modeleaza un monom reprezentat prin coeficient si exponent
 
 	private float coef;
 	private int exp;
@@ -9,7 +9,7 @@ public class Monom implements Comparable<Monom> {
 		this.coef = c;
 		this.exp = e;
 	}
-
+//getters & setters
 	public float getCoef() {
 		return coef;
 	}
@@ -27,11 +27,11 @@ public class Monom implements Comparable<Monom> {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() {//suprascriem toString-ul ca sa afisam monoamele tratand toate cazurile
 
 		if (coef < 0) {
-			if (coef != -1) {
-				if (exp == 0) {
+			if (coef != -1) { 
+				if (exp == 0) { 
 					return coef + "";
 				} else {
 					return coef + "*x^" + exp;
@@ -63,15 +63,15 @@ public class Monom implements Comparable<Monom> {
 
 	}
 
-	public int compareTo(Monom o) {
+	public int compareTo(Monom o) { //compareTo va fi utilizata in metoda de sortare a monoamelor
 		int rez;
 		if (this.getExp() == o.getExp())
 			rez = 0;
-		else if (this.getExp() > o.getExp())
+		else if (this.getExp() > o.getExp())  //le sortam descrescator dupa exponent
 			rez = -1;
 		else
 			rez = 1;
-		return rez;
+		return rez;            
 	}
 
 }
