@@ -14,7 +14,7 @@ public class Monom implements Comparable<Monom> { //clasa ce modeleaza un monom 
 		return coef;
 	}
 
-	public void setCoef(int coef) {
+	public void setCoef(float coef) {
 		this.coef = coef;
 	}
 
@@ -63,11 +63,11 @@ public class Monom implements Comparable<Monom> { //clasa ce modeleaza un monom 
 
 	}
 
-	public int compareTo(Monom o) { //compareTo va fi utilizata in metoda de sortare a monoamelor
+	public int compareTo(Monom o) { //compareTo va fi utilizata pentru sortarea a monoamelor
 		int rez;
 		if (this.getExp() == o.getExp())
 			rez = 0;
-		else if (this.getExp() > o.getExp())  //le sortam descrescator dupa exponent
+		else if (this.getExp() > o.getExp())  //vrem sa le sortam descrescator dupa exponent
 			rez = -1;
 		else
 			rez = 1;
